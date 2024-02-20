@@ -1,0 +1,8 @@
+.opcion{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    }
+    .opcion:hover{
+        color: rgb(41, 217, 41);
+    }
