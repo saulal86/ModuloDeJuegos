@@ -10,6 +10,8 @@ import { OpcionesComponent } from './opciones/opciones.component';
 import { CreadorComponent } from './creador/creador.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { PptComponent } from './ppt/ppt.component';
+import { SnakeComponent } from './snake/snake.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     JuegosComponent,
     OpcionesComponent,
     CreadorComponent,
+    PptComponent,
+    SnakeComponent,
   ],
   imports: [
     BrowserModule,

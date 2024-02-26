@@ -8,8 +8,10 @@
   
   
 <div class="zonabotones"> 
-  <button class="boton" mat-raised-button color="primary">Play</button>
-  <button class="boton" mat-raised-button color="primary">Options</button>
-  <button class="boton" mat-raised-button color="primary">Author</button>
-  <button class="boton" mat-raised-button color="primary">Exit</button>
+  <button class="boton" mat-raised-button color="primary" routerLink="/juegos">Play</button>
+  <button class="boton" mat-raised-button color="primary" routerLink="/opciones"> Options</button>
+  <button class="boton" mat-raised-button color="primary" routerLink="/autor">Author</button>
+  <button class="boton" mat-raised-button color="primary" routerLink="/lista-personajes">Exit</button>
 </div>
+
+<router-outlet></router-outlet>
