@@ -6,17 +6,9 @@
     </div>
     <div class="vidas">
         <p>Vidas del Jugador: </p>
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
+        <img *ngFor="let i of vidasJugadorArray" class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
         <p>Vidas de la Maquina: </p>
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
-        <img class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
+        <img *ngFor="let i of vidasMaquinaArray" class="imagen" src="/assets/imagenes/corazon.png" alt="imagen">
     </div>
     <div class="selecciones">
         <div (click)="elegir('tijeras')" class="eleccion tijeras"></div>

@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { PptComponent } from './ppt/ppt.component';
 import { SnakeComponent } from './snake/snake.component';
+import { TresrayaComponent } from './tresraya/tresraya.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SnakeComponent } from './snake/snake.component';
     CreadorComponent,
     PptComponent,
     SnakeComponent,
+    TresrayaComponent,
   ],
   imports: [
     BrowserModule,

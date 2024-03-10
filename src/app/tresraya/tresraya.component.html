@@ -1,0 +1,15 @@
+<div>
+    <h1 class="titulo">BIENVENIDO AL 3 EN RAYA</h1>
+    <div class="zonajuego">
+      <div class="fila" *ngFor="let fila of celdas; let i = index">
+        <div (click)="manejarClicCelda(i, j)" class="celda" *ngFor="let celda of fila; let j = index">
+          {{ celda }}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="finJuego">
+      <p class="textoFinal" *ngIf="ganador; else empate">Jugador {{ ganador }} gana!</p>
+      <ng-template #empate>Empate. Reinicia el juego.</ng-template>
+    </div>
+  </div>
+  

@@ -11,13 +11,21 @@ export class PptComponent implements OnInit{
   texto:String="";
   texto2:String="";
   texto3:String="";
-  nombre:string=""
+  nombre:string="";
+  eleccionMaquina: string = '';
+  vidasJugador: number = 5;
+  vidasMaquina: number = 5;
+estadoJuego: boolean = false;
 
   elecciones:string[]=["piedra", "papel", "tijeras"]
 
   constructor(private route:ActivatedRoute){
 
   }
+
+  
+  vidasJugadorArray: number[] = [];
+  vidasMaquinaArray: number[] = [];
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -29,6 +37,10 @@ export class PptComponent implements OnInit{
   }
 
   elegir(eleccion:String){
+    if (this.estadoJuego) {
+      return;
+    }
+
       this.texto="Elegiste: " + eleccion;  
     
       var eleccionMaquina=Math.floor(Math.random()*3);
@@ -38,16 +50,29 @@ export class PptComponent implements OnInit{
       eleccion=="papel" && this.elecciones[eleccionMaquina]=="piedra" ||
       eleccion=="piedra" && this.elecciones[eleccionMaquina]=="tijeras"){
         this.texto3="Ganaste";
+        this.vidasMaquina--;
       }
       if(eleccion=="tijeras" && this.elecciones[eleccionMaquina]=="piedra" ||
       eleccion=="papel" && this.elecciones[eleccionMaquina]=="tijeras" ||
       eleccion=="piedra" && this.elecciones[eleccionMaquina]=="papel"){
         this.texto3="Perdiste";
+        this.vidasJugador--;
       }if(eleccion=="tijeras" && this.elecciones[eleccionMaquina]=="tijeras" ||
       eleccion=="papel" && this.elecciones[eleccionMaquina]=="papel" ||
       eleccion=="piedra" && this.elecciones[eleccionMaquina]=="piedra"){
-        this.texto3="Ganaste";
+        this.texto3="Empate";
       }
+      if (this.vidasJugador == 0 || this.vidasMaquina == 0) {
+        this.estadoJuego = true;
+      }
+
+      this.actualizarVidasArrays();
+
+    }
+  
+    actualizarVidasArrays() {
+      this.vidasJugadorArray = Array(this.vidasJugador).fill(0);
+      this.vidasMaquinaArray = Array(this.vidasMaquina).fill(0);
     }
 
 }
