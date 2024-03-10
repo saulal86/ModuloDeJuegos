@@ -1,0 +1,8 @@
+<div>
+    <div class="tablero" *ngFor="let carta of tablero; let i = index">
+      <div class="carta" [class.volteada]="carta.descubierta" (click)="seleccionarCarta(i)">
+        {{ carta.descubierta ? carta.letra : '?' }}
+      </div>
+    </div>
+  </div>
+  

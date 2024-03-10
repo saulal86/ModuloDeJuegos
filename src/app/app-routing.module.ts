@@ -7,6 +7,7 @@ import { OpcionesComponent } from './opciones/opciones.component';
 import { PptComponent } from './ppt/ppt.component';
 import { SnakeComponent } from './snake/snake.component';
 import { TresrayaComponent } from './tresraya/tresraya.component';
+import { MemoriaComponent } from './memoria/memoria.component';
 
 const routes: Routes = [
   {path: '', component:MenuInicialComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'autor', component:CreadorComponent},
   {path: 'ppt', component: PptComponent},
   {path: 'snake', component: SnakeComponent},
-  {path: 'tresraya', component: TresrayaComponent}
+  {path: 'tresraya', component: TresrayaComponent},
+  {path: 'memoria', component: MemoriaComponent}
 ];
 
 @NgModule({

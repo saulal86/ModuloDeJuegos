@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { PptComponent } from './ppt/ppt.component';
 import { SnakeComponent } from './snake/snake.component';
 import { TresrayaComponent } from './tresraya/tresraya.component';
+import { MemoriaComponent } from './memoria/memoria.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { TresrayaComponent } from './tresraya/tresraya.component';
     PptComponent,
     SnakeComponent,
     TresrayaComponent,
+    MemoriaComponent,
   ],
   imports: [
     BrowserModule,
