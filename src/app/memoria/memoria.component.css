@@ -1,3 +1,11 @@
+.titulo{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
 .tablero {
     display: flex;
     flex-wrap: wrap;
